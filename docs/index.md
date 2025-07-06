@@ -1,6 +1,9 @@
 # Prompt Engineering Guide
 This guide provides information for Prompt Engineering and working with LLMs.
 
+Each topic page includes a **Contents Outline** section at the beginning so you
+can quickly navigate the material and locate key subtopics.
+
 ## Topics
 The course focuses on:
 

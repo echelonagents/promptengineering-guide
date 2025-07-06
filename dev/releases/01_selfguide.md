@@ -6,7 +6,12 @@ This is the first release for the Prompt Engineering guide
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
-### NLP [Codex] 2025-07-06 <HH>:<MM>
+### NLP [Codex] 2025-07-06 15:47
+
+- Added contents outline sections to all topic pages
+- Expanded the Natural Language Processing page with fundamental theory and
+  machine learning sections
+- Updated the landing page to mention outlines for each topic
 
 
 ### NLP [Data Engineer] Codex prompt 2025-07-06 15:45

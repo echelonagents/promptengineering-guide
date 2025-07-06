@@ -2,6 +2,14 @@
 
 In week six we explore LangChain, a Python framework for building agents that chain multiple language model calls and tools together.
 
+## Outline
+
+- building chains
+- tools and plugins
+- multi-step agents
+- example project
+- further exploration
+
 ## 1. Building Chains
 A chain is a sequence of prompts, model invocations and actions. LangChain makes it easy to connect these steps so that the output of one becomes the input of the next.
 

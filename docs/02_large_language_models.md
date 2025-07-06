@@ -2,6 +2,14 @@
 
 Modern large language models (LLMs) such as GPT-4, Claude and open-source alternatives are built upon the transformer architecture. This week provides a deep dive into how these models are trained and how we can use them effectively.
 
+## Outline
+
+- model families and providers
+- transformer architecture basics
+- using hosted APIs
+- evaluation and fine-tuning
+- ethical and practical concerns
+
 ## 1. Model Families
 LLM providers fall into two broad categories: proprietary offerings like OpenAI’s GPT series or Anthropic’s Claude, and open models such as Llama or Mistral. Each family offers different licensing terms and API interfaces, but the underlying neural architecture shares common principles.
 

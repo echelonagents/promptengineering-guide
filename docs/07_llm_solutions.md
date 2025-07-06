@@ -2,6 +2,14 @@
 
 The final week surveys complete solutions built with language models across different industries. We discuss deployment considerations and real-world success stories.
 
+## Outline
+
+- conversational systems
+- summarization and question answering
+- domain automation
+- deployment considerations
+- capstone project
+
 ## 1. Conversational Systems
 Chatbots and virtual assistants automate customer service and technical support. Effective systems combine retrieval (for factual accuracy) with dialogue management. Tools such as sentiment detection help tailor responses to user emotions.
 
