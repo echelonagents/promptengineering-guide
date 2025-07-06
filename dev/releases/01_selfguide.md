@@ -6,7 +6,9 @@ This is the first release for the Prompt Engineering guide
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
-### Contents development [Codex] 2025-07-06 <HH>:<MM>
+### Contents development [Codex] 2025-07-06 15:29
+- Expanded each weekly module to multi-page lecture notes
+- Added course schedule on landing page
 
 ### Contents development [Data Engineer] Codex prompt 2025-07-06 15:20
 
