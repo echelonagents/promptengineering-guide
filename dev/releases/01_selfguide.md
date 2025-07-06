@@ -6,6 +6,22 @@ This is the first release for the Prompt Engineering guide
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
+### Contents development [Codex] 2025-07-06 <HH>:<MM>
+
+### Contents development [Data Engineer] Codex prompt 2025-07-06 15:20
+
+For context, refer to the navigation guide in `mkdocs.yml`, landing page `/docs/index.md` and the release doc `/dev/releases/01_selfguide`
+
+objectives
+build out the curriculum contents for a 7-week Prompt engineering course, that will cover the topics listed in the landing page.
+
+your task
+- flesh out contents of the pages from their current level of detail around a 1/2 page to a 1 page, to around 5 pages each. 
+- include paragraph style explanations of topics with examples and explain the fundamentals and how they are applied.
+- For example for **Natural Language Processing** the page is `/docs/01_natural_language_processing.md`. Work in iterative cycles of developing the outline for each page, and then filling in the contents until you reach a level of detail of a course content of a text book or lecture notes.  
+- update your activity as a timestamped session log in the ## Session logs section of the release doc in the section ### Contents development [Codex] 2025-07-06 <HH>:<MM> 
+- create a PR with the edits to the landing page and your session log
+
 ### Contents development [Codex] 2025-07-06 15:17
 
 - Expanded curriculum pages with lecture-style content
