@@ -19,17 +19,19 @@ The course focuses on:
   - transformer architecture basics
   - using APIs for inference and evaluation
 - **RAG, Embedding and Vector Databases**
-  - *
+  - retrieval augmented generation workflows
+  - embedding models for semantic search
+  - storing and querying vectors in databases
 - **Prompt Engineering**
   - prompt design best practices
   - zero-shot, few-shot and chain-of-thought techniques
   - system versus user prompts
 - **AI Applications**
   - integrating LLM APIs into applications
-  - feedback loops and model evaluation
-  - safety and responsible use
 - **AI Agents using LangChain**
-  - *
+  - chains, tools and memory management
+  - building conversational agents
+  - orchestrating multi-step reasoning
 - **LLM Solutions**
   - building chatbots and conversational agents
   - summarization and question answering
