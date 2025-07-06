@@ -1,0 +1,8 @@
+site_name: Prompt Engineering Guide
+
+nav:
+  - Home: index.md
+
+theme:
+  name: material
+
