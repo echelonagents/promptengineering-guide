@@ -1,3 +1,4 @@
 setuptools
 mkdocs
 mkdocs-material
+mkdocs-material[mermaid]
