@@ -37,3 +37,12 @@ The course focuses on:
   - summarization and question answering
   - domain-specific automation examples
 
+
+## Course Schedule
+Week 1: Natural Language Processing
+Week 2: Large Language Models
+Week 3: Retrieval Augmented Generation and Embedding
+Week 4: Prompt Engineering
+Week 5: AI Applications
+Week 6: AI Agent Development using LangChain
+Week 7: LLM Solutions and Project Showcase
