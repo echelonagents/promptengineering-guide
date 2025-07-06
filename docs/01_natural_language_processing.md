@@ -2,6 +2,10 @@
 
 Natural Language Processing (NLP) is the discipline focused on understanding and generating human language with computers. In our first week we build the foundational toolkit for working with raw text. The goal is to transform unstructured sentences into representations that can be fed into language models or traditional machine learning pipelines.
 
+## Outline
+
+_add the outline here_
+
 ## 1. Overview of NLP Tasks
 NLP spans a broad range of tasks from tokenization and part-of-speech tagging to machine translation and text generation. We examine the classic pipeline of text classification, named entity recognition and summarization. Each task benefits from accurate preprocessing and token management, topics that we will explore in depth.
 
@@ -55,7 +59,11 @@ To build a semantic search engine, we embed user queries and corpus documents in
 ## 7. Evaluation Metrics
 Common metrics for evaluating NLP pipelines include precision, recall and F1 score for classification, or BLEU and ROUGE for machine translation and summarization. Proper evaluation helps compare algorithms and tune hyperparameters.
 
-## 8. Practical Exercise
+## XX. Machine learning with NLP
+
+_elaborate a few sections with examples for using NLP as part of building an ML model for classification, regression and unsupervised learning tasks
+
+## XX. Practical Exercise
 The assignment for this module is to implement a small semantic search engine. Using Python libraries such as spaCy and scikit-learn, you will:
 1. Preprocess a text dataset by tokenizing, lemmatizing and removing stop words.
 2. Generate TF‑IDF features and train a basic classifier.

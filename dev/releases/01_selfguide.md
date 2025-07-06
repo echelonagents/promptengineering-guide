@@ -6,6 +6,29 @@ This is the first release for the Prompt Engineering guide
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
+### NLP [Codex] 2025-07-06 <HH>:<MM>
+
+
+### NLP [Data Engineer] Codex prompt 2025-07-06 15:45
+
+For context, refer to the navigation guide in `mkdocs.yml`, landing page `/docs/index.md` and the release doc `/dev/releases/01_selfguide`
+
+objectives
+add topic outline section, NLP add sections for NLP with ML
+
+your task
+- scope: all topic pages
+    - add a contents outline section for each page
+- scope: `/docs/01_natural_language_processing.md`
+    - add a section for fundamental theory and concepts of NLP, difference between different levels of structure of language at word, grammar, and semantic levels
+    - explain how NLP models are developed and trained on corupses
+    - add sub-sections to this page to cover how to use NLP with ML for using unstructured data and tokens as features in building an ML model
+    - aim for around 2-3 pages of contents, addressing the range of applications such as regression, classification, unsupervised, supervised and others which are not listed. 
+    - re-update section numberings substitute XX placeholders
+- Work in iterative cycles of developing the outline for each page, and then filling in the contents until you reach a level of detail of a course content of a text book or lecture notes.  
+- update your activity as a timestamped session log in the ## Session logs section of the release doc in the section ### NLP [Codex] 2025-07-06 <HH>:<MM> 
+- create a PR with the edits to the landing page and your session log
+
 ### Contents development [Codex] 2025-07-06 15:29
 - Expanded each weekly module to multi-page lecture notes
 - Added course schedule on landing page
