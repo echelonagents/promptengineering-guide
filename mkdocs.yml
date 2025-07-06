@@ -9,6 +9,7 @@ nav:
   - AI Applications: 05_ai_applications.md
   - AI Agents using LangChain: 06_ai_agent_langchain.md
   - LLM Solutions: 07_llm_solutions.md
+  - Case Examples: 08_case_examples.md
 
 theme:
   name: material

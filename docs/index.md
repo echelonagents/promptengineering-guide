@@ -39,7 +39,8 @@ The course focuses on:
   - building chatbots and conversational agents
   - summarization and question answering
   - domain-specific automation examples
-
+- **Case Examples**
+A collection of case examples of LLM and AI Agents applied to real world use cases
 
 ## Course Schedule
 Week 1: Natural Language Processing
