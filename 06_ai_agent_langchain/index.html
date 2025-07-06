@@ -770,16 +770,16 @@ as the user’s name or preferences for use in later steps.</p>
 3. Feed the documents and question to a language model.
 4. Return the model’s summarized answer along with references.</p>
 <h3 id="sample-code">Sample Code</h3>
-<pre><code class="language-python">from langchain.chains import RetrievalQA
-from langchain.llms import OpenAI
-from langchain.vectorstores import FAISS
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.chains</span><span class="w"> </span><span class="kn">import</span> <span class="n">RetrievalQA</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.llms</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">FAISS</span>
 
-vector_store = FAISS.load_local('docs_index')
-llm = OpenAI(model_name='gpt-3.5-turbo')
-qa = RetrievalQA(llm=llm, retriever=vector_store.as_retriever())
-response = qa.run('How do I install the package?')
-print(response)
-</code></pre>
+<span class="n">vector_store</span> <span class="o">=</span> <span class="n">FAISS</span><span class="o">.</span><span class="n">load_local</span><span class="p">(</span><span class="s1">&#39;docs_index&#39;</span><span class="p">)</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;gpt-3.5-turbo&#39;</span><span class="p">)</span>
+<span class="n">qa</span> <span class="o">=</span> <span class="n">RetrievalQA</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span> <span class="n">retriever</span><span class="o">=</span><span class="n">vector_store</span><span class="o">.</span><span class="n">as_retriever</span><span class="p">())</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">qa</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;How do I install the package?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="6-evaluation-techniques">6. Evaluation Techniques</h2>
 <p>Evaluate agents by logging intermediate steps and checking whether the chosen
 tools lead to correct answers. LangChain provides tracing utilities that export

@@ -839,16 +839,16 @@ be expressed as a Python string with <code>{variable}</code> tokens or as a stru
 object containing fields for system, user and tool messages. Managing prompts as
 data enables version control and automated testing.</p>
 <h3 id="example-template">Example Template</h3>
-<pre><code class="language-python">template = &quot;&quot;&quot;You are a math tutor.\nQuestion: {question}\nAnswer:&quot;&quot;&quot;
-filled = template.format(question=&quot;What is 2+2?&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;You are a math tutor.</span><span class="se">\n</span><span class="s2">Question: </span><span class="si">{question}</span><span class="se">\n</span><span class="s2">Answer:&quot;&quot;&quot;</span>
+<span class="n">filled</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">question</span><span class="o">=</span><span class="s2">&quot;What is 2+2?&quot;</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="5-advanced-formatting">5. Advanced Formatting</h2>
 <p>When output needs to be machine-readable, we can instruct the model to respond in JSON or Markdown. Using placeholders and bullet lists reduces variation in the output structure.</p>
 <h3 id="example-prompt">Example Prompt</h3>
-<pre><code>You are a concise consultant.
+<div class="highlight"><pre><span></span><code>You are a concise consultant.
 Answer the question using three bullet points.
 Question: How can I reduce latency in a web app?
-</code></pre>
+</code></pre></div>
 <h3 id="temperature-and-top-p">Temperature and Top-p</h3>
 <p>The randomness of model output is controlled with the <code>temperature</code> and
 <code>top_p</code> parameters. Lower temperature produces more deterministic responses,

@@ -842,14 +842,14 @@
 <h2 id="5-using-hosted-apis">5. Using Hosted APIs</h2>
 <p>Most developers access LLMs through web APIs. When sending prompts, it’s important to manage context length, system instructions and rate limits. Providers like OpenAI return responses in JSON format with metadata. Error handling ensures robust applications.</p>
 <h3 id="example">Example</h3>
-<pre><code class="language-python">import openai
-openai.api_key = &quot;YOUR_KEY&quot;
-response = openai.ChatCompletion.create(
-    model=&quot;gpt-4&quot;,
-    messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Explain transformers&quot;}]
-)
-print(response.choices[0].message.content)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">openai</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOUR_KEY&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Explain transformers&quot;</span><span class="p">}]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="tips">Tips</h3>
 <ul>
 <li>Cache frequent prompts to reduce latency and cost.</li>
@@ -863,24 +863,24 @@ print(response.choices[0].message.content)
 <h2 id="7-ethical-and-practical-concerns">7. Ethical and Practical Concerns</h2>
 <p>Large models inherit biases present in their training data. It is critical to monitor for unfair or harmful outputs. Data privacy must be considered when sending user content to hosted services. Finally, the energy consumption required to train these models raises environmental concerns. Organizations should weigh these factors when deciding on adoption.</p>
 <h2 id="8-hands-on-code-example">8. Hands-on Code Example</h2>
-<p>The snippet below shows how a small transformer model can be fine-tuned using the <code>transformers</code> library from Hugging Face.</p>
-<pre><code class="language-python">from datasets import load_dataset
-from transformers import (AutoTokenizer, AutoModelForCausalLM,
-                          Trainer, TrainingArguments)
+<p>The snippet below shows how a small transformer model can be fine-tuned using the <code>transformers</code> library from Hugging Face.
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">AutoTokenizer</span><span class="p">,</span> <span class="n">AutoModelForCausalLM</span><span class="p">,</span>
+                          <span class="n">Trainer</span><span class="p">,</span> <span class="n">TrainingArguments</span><span class="p">)</span>
 
-tokenizer = AutoTokenizer.from_pretrained('gpt2')
-model = AutoModelForCausalLM.from_pretrained('gpt2')
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;gpt2&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;gpt2&#39;</span><span class="p">)</span>
 
-def tokenize(batch):
-    return tokenizer(batch['text'], truncation=True, padding='max_length')
+<span class="k">def</span><span class="w"> </span><span class="nf">tokenize</span><span class="p">(</span><span class="n">batch</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tokenizer</span><span class="p">(</span><span class="n">batch</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">truncation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;max_length&#39;</span><span class="p">)</span>
 
-data = load_dataset('wikitext', 'wikitext-2-raw-v1')
-tokenized = data['train'].map(tokenize, batched=True)
+<span class="n">data</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;wikitext&#39;</span><span class="p">,</span> <span class="s1">&#39;wikitext-2-raw-v1&#39;</span><span class="p">)</span>
+<span class="n">tokenized</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">tokenize</span><span class="p">,</span> <span class="n">batched</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-args = TrainingArguments('out', per_device_train_batch_size=2, num_train_epochs=1)
-trainer = Trainer(model=model, args=args, train_dataset=tokenized)
-trainer.train()
-</code></pre>
+<span class="n">args</span> <span class="o">=</span> <span class="n">TrainingArguments</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">per_device_train_batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">num_train_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">train_dataset</span><span class="o">=</span><span class="n">tokenized</span><span class="p">)</span>
+<span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+</code></pre></div></p>
 <p>By the end of week two you will be able to describe the architecture of modern LLMs, interact with them via APIs and understand the trade-offs between proprietary and open-source solutions.</p>
 
 

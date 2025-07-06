@@ -806,15 +806,15 @@ depends on trade-offs between speed, memory and recall.</p>
 <li>Assemble a prompt that includes the retrieved context and ask the language model to answer based only on that information.</li>
 </ol>
 <h3 id="example-code-snippet">Example Code Snippet</h3>
-<pre><code class="language-python">from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.embeddings</span><span class="w"> </span><span class="kn">import</span> <span class="n">HuggingFaceEmbeddings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">FAISS</span>
 
-embed = HuggingFaceEmbeddings(model_name='all-MiniLM-L6-v2')
-texts = [&quot;Document chunk one&quot;, &quot;Another chunk&quot;]
-store = FAISS.from_texts(texts, embed)
-question = &quot;What is in the document?&quot;
-matched_docs = store.similarity_search(question)
-</code></pre>
+<span class="n">embed</span> <span class="o">=</span> <span class="n">HuggingFaceEmbeddings</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="p">)</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Document chunk one&quot;</span><span class="p">,</span> <span class="s2">&quot;Another chunk&quot;</span><span class="p">]</span>
+<span class="n">store</span> <span class="o">=</span> <span class="n">FAISS</span><span class="o">.</span><span class="n">from_texts</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">embed</span><span class="p">)</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What is in the document?&quot;</span>
+<span class="n">matched_docs</span> <span class="o">=</span> <span class="n">store</span><span class="o">.</span><span class="n">similarity_search</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="6-evaluation-metrics">6. Evaluation Metrics</h2>
 <p>To gauge retrieval quality we measure recall—the proportion of relevant documents
 returned—as well as precision and overall latency. Evaluating the end-to-end RAG

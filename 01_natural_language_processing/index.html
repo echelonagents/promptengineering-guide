@@ -1030,11 +1030,11 @@ projects.</p>
 - <strong>Stop Word Removal</strong>: Many analyses remove common words ("the", "and") to focus on informative terms.
 - <strong>Stemming and Lemmatization</strong>: Reduce words to their root forms. Stemming uses heuristics to chop off endings, while lemmatization references dictionaries for correct morphological forms.</p>
 <h3 id="code-example">Code Example</h3>
-<pre><code class="language-python">import spacy
-nlp = spacy.load('en_core_web_sm')
-doc = nlp(&quot;Cats running and dogs run&quot;)
-print([token.lemma_ for token in doc])
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">spacy</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en_core_web_sm&#39;</span><span class="p">)</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="s2">&quot;Cats running and dogs run&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">token</span><span class="o">.</span><span class="n">lemma_</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">])</span>
+</code></pre></div>
 <h2 id="5-classical-representations">5. Classical Representations</h2>
 <p>Early NLP models relied on bag-of-words features. Each document is represented by a vector that counts the occurrences of every term. TF‑IDF weighting scales the counts to emphasize distinctive words and downplay common terms. Despite their simplicity, these representations still perform well in some tasks.</p>
 <h3 id="n-grams">N-grams</h3>
@@ -1044,11 +1044,11 @@ print([token.lemma_ for token in doc])
 <h3 id="contextual-embeddings">Contextual Embeddings</h3>
 <p>Recent models such as ELMo and BERT produce token embeddings that depend on the sentence. A word like "bank" yields different vectors in "river bank" versus "bank account." These embeddings are the starting point for modern large language models.</p>
 <h3 id="training-word2vec">Training Word2vec</h3>
-<pre><code class="language-python">from gensim.models import Word2Vec
-sentences = [['this','is','a','sentence'], ['this','is','another']]
-model = Word2Vec(sentences, vector_size=100, window=5, min_count=1)
-vector = model.wv['sentence']
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;this&#39;</span><span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;sentence&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;this&#39;</span><span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;another&#39;</span><span class="p">]]</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;sentence&#39;</span><span class="p">]</span>
+</code></pre></div>
 <h2 id="7-embedding-spaces-and-similarity">7. Embedding Spaces and Similarity</h2>
 <p>Once words or sentences are embedded into vectors, we can measure similarity with distances such as cosine or Euclidean metrics. Nearby vectors indicate semantic closeness. This property underpins search, clustering and recommendation systems.</p>
 <h3 id="vector-arithmetic">Vector Arithmetic</h3>
@@ -1096,15 +1096,15 @@ and optimizing a learning objective.</p>
 3. Create sentence embeddings using a transformer model like <code>all-MiniLM</code> from the <code>sentence-transformers</code> package.
 4. Perform a similarity query and evaluate the retrieval quality.</p>
 <h3 id="sample-setup-code">Sample Setup Code</h3>
-<pre><code class="language-python">from sentence_transformers import SentenceTransformer, util
-model = SentenceTransformer('all-MiniLM-L6-v2')
-corpus = [&quot;NLP is fun&quot;, &quot;We study language&quot;, &quot;Transformers are powerful&quot;]
-corpus_embeddings = model.encode(corpus, convert_to_tensor=True)
-query = &quot;language models&quot;
-query_embedding = model.encode(query, convert_to_tensor=True)
-results = util.semantic_search(query_embedding, corpus_embeddings, top_k=2)
-print(results)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sentence_transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">SentenceTransformer</span><span class="p">,</span> <span class="n">util</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="p">)</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NLP is fun&quot;</span><span class="p">,</span> <span class="s2">&quot;We study language&quot;</span><span class="p">,</span> <span class="s2">&quot;Transformers are powerful&quot;</span><span class="p">]</span>
+<span class="n">corpus_embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">convert_to_tensor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;language models&quot;</span>
+<span class="n">query_embedding</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">convert_to_tensor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">semantic_search</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">corpus_embeddings</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</code></pre></div>
 <p>By the end of week one, you should be comfortable preparing text for advanced models, generating embeddings and measuring similarity. These skills are essential for all subsequent weeks of the course.</p>
 
 
