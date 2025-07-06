@@ -6,13 +6,28 @@ This is the first release for the Prompt Engineering guide
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
+### Contents development [Codex] 2025-07-06 <HH>:<MM>
+
+### Contents development [Data Engineer] Codex prompt 2025-07-06 15:55
+
+For context, refer to the navigation guide in `mkdocs.yml`, landing page `/docs/index.md` and the release doc `/dev/releases/01_selfguide`
+
+situation
+the current topic pages are too general, and not sufficient level of detail to properly cover the theory and application of the topics
+
+your task
+- scope: all topic pages
+    - using NLP page `/docs/01_natural_language_processing.md` as a guide, flesh out and develop the remaining pages to this level of detail and coverage of the topics, including theory development, data structures, algorithms and practical examples
+- Work in iterative cycles of developing the outline for each page, and then filling in the contents until you reach a level of detail of a course content of a text book or lecture notes.  
+- update your activity as a timestamped session log in the ## Session logs section of the release doc in the section ### Contents development [Codex] 2025-07-06 <HH>:<MM> 
+- create a PR with the edits to the landing page and your session log
+
 ### NLP [Codex] 2025-07-06 15:47
 
 - Added contents outline sections to all topic pages
 - Expanded the Natural Language Processing page with fundamental theory and
   machine learning sections
 - Updated the landing page to mention outlines for each topic
-
 
 ### NLP [Data Engineer] Codex prompt 2025-07-06 15:45
 
