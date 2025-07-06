@@ -6,9 +6,12 @@ Modern large language models (LLMs) such as GPT-4, Claude and open-source altern
 
 - model families and providers
 - transformer architecture basics
+- tokenization and vocabulary
+- training algorithms
 - using hosted APIs
 - evaluation and fine-tuning
 - ethical and practical concerns
+- hands-on code example
 
 ## 1. Model Families
 LLM providers fall into two broad categories: proprietary offerings like OpenAI’s GPT series or Anthropic’s Claude, and open models such as Llama or Mistral. Each family offers different licensing terms and API interfaces, but the underlying neural architecture shares common principles.
@@ -29,7 +32,13 @@ LLMs are typically trained to predict the next token in a sequence. This objecti
 ### Scaling Laws
 Research shows that model performance scales predictably with data, parameter count and compute budget. Understanding these relationships helps when deciding between a smaller local model and a large hosted service.
 
-## 3. Using Hosted APIs
+## 3. Tokenization and Vocabulary
+Tokenizers split text into manageable pieces. Byte-Pair Encoding (BPE) and WordPiece are common algorithms that build a vocabulary of subword units. Each token is mapped to an integer ID so it can be processed by the model. The vocabulary typically includes special symbols like `<pad>` for padding sequences and `<eos>` for marking the end of a sentence. Proper tokenization yields consistent sequence lengths and reduces out-of-vocabulary issues.
+
+## 4. Training Algorithms
+Training begins with massive text corpora that are shuffled and broken into fixed-length sequences. The transformer processes each batch while the optimizer updates weights via gradient descent. Strategies such as gradient accumulation, mixed-precision training and data parallelism enable scaling to billions of parameters. Many teams further align the model with Reinforcement Learning from Human Feedback (RLHF), which uses human preference scores and Proximal Policy Optimization to refine responses.
+
+## 5. Using Hosted APIs
 Most developers access LLMs through web APIs. When sending prompts, it’s important to manage context length, system instructions and rate limits. Providers like OpenAI return responses in JSON format with metadata. Error handling ensures robust applications.
 
 ### Example
@@ -48,13 +57,34 @@ print(response.choices[0].message.content)
 - Monitor token usage to avoid unexpected bills.
 - Evaluate model outputs for bias or inappropriate content.
 
-## 4. Evaluation and Fine-tuning
+## 6. Evaluation and Fine-tuning
 While base models provide impressive capabilities, performance often improves with fine-tuning on task-specific data. Evaluation metrics such as perplexity, BLEU or human preference scores help determine whether fine-tuning is necessary.
 
 ### Parameter-Efficient Methods
 Techniques like LoRA (Low-Rank Adaptation) and prompt tuning modify only a small subset of model parameters or the input embeddings, enabling efficient adaptation even on modest hardware.
 
-## 5. Ethical and Practical Concerns
+## 7. Ethical and Practical Concerns
 Large models inherit biases present in their training data. It is critical to monitor for unfair or harmful outputs. Data privacy must be considered when sending user content to hosted services. Finally, the energy consumption required to train these models raises environmental concerns. Organizations should weigh these factors when deciding on adoption.
+
+## 8. Hands-on Code Example
+The snippet below shows how a small transformer model can be fine-tuned using the `transformers` library from Hugging Face.
+```python
+from datasets import load_dataset
+from transformers import (AutoTokenizer, AutoModelForCausalLM,
+                          Trainer, TrainingArguments)
+
+tokenizer = AutoTokenizer.from_pretrained('gpt2')
+model = AutoModelForCausalLM.from_pretrained('gpt2')
+
+def tokenize(batch):
+    return tokenizer(batch['text'], truncation=True, padding='max_length')
+
+data = load_dataset('wikitext', 'wikitext-2-raw-v1')
+tokenized = data['train'].map(tokenize, batched=True)
+
+args = TrainingArguments('out', per_device_train_batch_size=2, num_train_epochs=1)
+trainer = Trainer(model=model, args=args, train_dataset=tokenized)
+trainer.train()
+```
 
 By the end of week two you will be able to describe the architecture of modern LLMs, interact with them via APIs and understand the trade-offs between proprietary and open-source solutions.
