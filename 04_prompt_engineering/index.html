@@ -1,0 +1,906 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../03_rag_embedding/">
+      
+      
+        <link rel="next" href="../05_ai_applications/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Prompt Engineering - Prompt Engineering Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompt-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Prompt Engineering Guide" class="md-header__button md-logo" aria-label="Prompt Engineering Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompt Engineering Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompt Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Prompt Engineering Guide" class="md-nav__button md-logo" aria-label="Prompt Engineering Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Prompt Engineering Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_natural_language_processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Natural Language Processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_large_language_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Large Language Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_rag_embedding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RAG, Embedding and Vector Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Prompt Engineering
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Engineering
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prompt-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prompt Design Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Prompt Design Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-zero-shot-few-shot-and-chain-of-thought" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Zero-shot, Few-shot and Chain-of-Thought
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Zero-shot, Few-shot and Chain-of-Thought">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-consistency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-system-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Using System Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Using System Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controlling-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling Style
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-prompt-templates-and-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Prompt Templates and Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Prompt Templates and Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-advanced-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Advanced Formatting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Advanced Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperature-and-top-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temperature and Top-p
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prompt-iteration-and-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Prompt Iteration and Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-automated-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Automated Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-practical-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Practical Exercise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_ai_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_ai_agent_langchain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Agents using LangChain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_llm_solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LLM Solutions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prompt-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prompt Design Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Prompt Design Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-zero-shot-few-shot-and-chain-of-thought" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Zero-shot, Few-shot and Chain-of-Thought
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Zero-shot, Few-shot and Chain-of-Thought">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-consistency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-system-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Using System Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Using System Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controlling-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling Style
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-prompt-templates-and-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Prompt Templates and Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Prompt Templates and Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-advanced-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Advanced Formatting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Advanced Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperature-and-top-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temperature and Top-p
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prompt-iteration-and-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Prompt Iteration and Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-automated-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Automated Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-practical-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Practical Exercise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="prompt-engineering">Prompt Engineering</h1>
+<p>Week four explores how to craft prompts that reliably steer language models toward the desired output. Well-designed prompts can dramatically improve accuracy and reduce unwanted behavior.</p>
+<h2 id="outline">Outline</h2>
+<ul>
+<li>prompt design principles</li>
+<li>zero-shot, few-shot and chain-of-thought</li>
+<li>using system prompts</li>
+<li>prompt templates and data structures</li>
+<li>advanced formatting</li>
+<li>prompt iteration and evaluation</li>
+<li>automated optimization</li>
+<li>practical exercise</li>
+</ul>
+<h2 id="1-prompt-design-principles">1. Prompt Design Principles</h2>
+<p>A prompt should clearly state the task and provide any needed context. Typically we include a system or persona message to guide style and tone. Explicit instructions about output format help prevent confusion.</p>
+<h3 id="guidelines">Guidelines</h3>
+<ul>
+<li>Keep instructions concise yet specific.</li>
+<li>Use delimiters such as triple backticks to separate instructions from user content.</li>
+<li>Include examples of correct output when possible.</li>
+<li>Control randomness with the temperature and top‑p parameters.</li>
+</ul>
+<h2 id="2-zero-shot-few-shot-and-chain-of-thought">2. Zero-shot, Few-shot and Chain-of-Thought</h2>
+<ul>
+<li><strong>Zero-shot</strong>: Ask the model to perform the task directly with no examples.</li>
+<li><strong>Few-shot</strong>: Provide a handful of labeled examples within the prompt to establish the pattern.</li>
+<li><strong>Chain-of-thought</strong>: Encourage multi-step reasoning by telling the model to explain its steps before giving the final answer.</li>
+</ul>
+<h3 id="self-consistency">Self-consistency</h3>
+<p>By generating several chain-of-thought responses and voting on the most consistent outcome, we can achieve higher accuracy on complex reasoning tasks.</p>
+<h2 id="3-using-system-prompts">3. Using System Prompts</h2>
+<p>System prompts establish the role or persona of the assistant, such as "You are a helpful travel planner." Distinguishing between system and user prompts prevents instructions from being interpreted as user input.</p>
+<h3 id="controlling-style">Controlling Style</h3>
+<p>We can mimic styles ranging from academic explanations to casual conversation. Including explicit style cues helps tailor the voice to the target audience.</p>
+<h2 id="4-prompt-templates-and-data-structures">4. Prompt Templates and Data Structures</h2>
+<p>Complex applications store prompts as templates with placeholders. A template may
+be expressed as a Python string with <code>{variable}</code> tokens or as a structured
+object containing fields for system, user and tool messages. Managing prompts as
+data enables version control and automated testing.</p>
+<h3 id="example-template">Example Template</h3>
+<pre><code class="language-python">template = &quot;&quot;&quot;You are a math tutor.\nQuestion: {question}\nAnswer:&quot;&quot;&quot;
+filled = template.format(question=&quot;What is 2+2?&quot;)
+</code></pre>
+<h2 id="5-advanced-formatting">5. Advanced Formatting</h2>
+<p>When output needs to be machine-readable, we can instruct the model to respond in JSON or Markdown. Using placeholders and bullet lists reduces variation in the output structure.</p>
+<h3 id="example-prompt">Example Prompt</h3>
+<pre><code>You are a concise consultant.
+Answer the question using three bullet points.
+Question: How can I reduce latency in a web app?
+</code></pre>
+<h3 id="temperature-and-top-p">Temperature and Top-p</h3>
+<p>The randomness of model output is controlled with the <code>temperature</code> and
+<code>top_p</code> parameters. Lower temperature produces more deterministic responses,
+while a higher value encourages creative or varied text. Nucleus sampling
+(<code>top_p</code>) limits generation to the most probable tokens whose cumulative
+probability is below a threshold, often producing coherent yet diverse answers.</p>
+<h2 id="6-prompt-iteration-and-evaluation">6. Prompt Iteration and Evaluation</h2>
+<p>Developing a good prompt is an iterative process. Start with a clear baseline, test the output on multiple examples and refine. Automated evaluation frameworks such as OpenAI’s prompt engineering tools or the <code>langchain</code> evaluator can assist with this process.</p>
+<p>Evaluation often measures metrics like exact match on benchmark tasks or user satisfaction collected through ratings. Tracking how prompts perform across multiple criteria helps identify trade-offs between brevity, accuracy and style. Version control of prompts enables A/B testing and regression checks.</p>
+<h2 id="7-automated-optimization">7. Automated Optimization</h2>
+<p>Tools such as prompt matrices and evolutionary algorithms can automatically test
+variations of a base prompt. By measuring accuracy or user satisfaction we can
+select the best-performing template. This approach scales when manual iteration
+becomes impractical.</p>
+<p>One common strategy is to randomly sample variations of wording or ordering within a prompt and score them with a reference answer. Gradient-free optimization methods such as Bayesian search can then converge on high-performing prompts with fewer trials.</p>
+<h2 id="8-practical-exercise">8. Practical Exercise</h2>
+<p>Design prompts for a summarization tool and a data extraction pipeline. Experiment with different temperature settings and evaluate how formatting instructions affect the consistency of the model’s responses.</p>
+<p>By the end of week four you will be able to write prompts that consistently guide LLMs to produce high-quality, safe and formatted output for a variety of tasks.</p>
+<p>Continuous improvement is key. Save successful prompts in a library and track
+their performance on real user queries. Over time these prompt libraries become
+valuable assets that accelerate development of new LLM applications.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
