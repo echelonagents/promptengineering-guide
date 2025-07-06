@@ -2,6 +2,15 @@
 
 Week four explores how to craft prompts that reliably steer language models toward the desired output. Well-designed prompts can dramatically improve accuracy and reduce unwanted behavior.
 
+## Outline
+
+- prompt design principles
+- zero-shot, few-shot and chain-of-thought
+- using system prompts
+- advanced formatting
+- prompt iteration and evaluation
+- practical exercise
+
 ## 1. Prompt Design Principles
 A prompt should clearly state the task and provide any needed context. Typically we include a system or persona message to guide style and tone. Explicit instructions about output format help prevent confusion.
 

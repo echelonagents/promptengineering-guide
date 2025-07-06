@@ -2,6 +2,13 @@
 
 Week five focuses on integrating language models into real-world applications. We explore common patterns and discuss how to evaluate systems in production.
 
+## Outline
+
+- application patterns
+- evaluation and feedback
+- safety considerations
+- implementation exercise
+
 ## 1. Application Patterns
 LLMs power a variety of services including chatbots, summarization tools and knowledge extraction pipelines. We survey each of these patterns and discuss the design considerations involved.
 

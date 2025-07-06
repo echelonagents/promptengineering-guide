@@ -2,6 +2,15 @@
 
 Retrieval Augmented Generation (RAG) combines the reasoning abilities of language models with the accuracy of external knowledge bases. In week three we learn to build systems that fetch relevant context and feed it to a generator model.
 
+## Outline
+
+- the RAG workflow
+- embedding models
+- vector databases
+- building a RAG system
+- challenges and best practices
+- implementation exercise
+
 ## 1. The RAG Workflow
 1. **Query Encoding**: The user question or prompt is embedded using a transformer encoder.
 2. **Vector Retrieval**: The embedding is compared to vectors stored in a database. The most similar passages are retrieved.
