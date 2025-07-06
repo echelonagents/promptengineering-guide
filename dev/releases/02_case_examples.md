@@ -6,6 +6,7 @@ This release includes case examples for developing AI Agents in real-world appli
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
-### Contents [Data Engineer] 2025-07-06 17:00
+### Contents [Data Engineer] 2025-07-06 18:40
 
-- **
+- developed case example Transaction reconciliation
+    see `/docs/08_case_example_txn_reconcile.md`
