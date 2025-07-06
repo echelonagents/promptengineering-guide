@@ -1,5 +1,5 @@
 # Prompt Engineering Guide
-This guide provides information for Prompt Engineering and working with LLMs.
+This guide provides information for Prompt Engineering and working with LLMs. Each topic delves into theory, data structures and practical algorithms so you can build end‑to‑end solutions.
 
 Each topic page includes a **Contents Outline** section at the beginning so you
 can quickly navigate the material and locate key subtopics.

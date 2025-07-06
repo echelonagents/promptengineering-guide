@@ -6,7 +6,14 @@ This is the first release for the Prompt Engineering guide
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
-### Contents development [Codex] 2025-07-06 <HH>:<MM>
+### Contents development [Codex] 2025-07-06 16:02
+
+- Expanded all topic pages with detailed theory, data structures and algorithms
+  following the NLP chapter as a template
+- Added practical code examples across LLM, RAG, prompt engineering, agent and
+  application sections
+- Updated the landing page introduction
+- Logged progress in this session
 
 ### Contents development [Data Engineer] Codex prompt 2025-07-06 15:55
 
