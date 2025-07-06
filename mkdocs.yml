@@ -2,6 +2,13 @@ site_name: Prompt Engineering Guide
 
 nav:
   - Home: index.md
+  - Natural Language Processing: 01_natural_language_processing.md
+  - Large Language Models: 02_large_language_models.md
+  - RAG, Embedding and Vector Databases: 03_rag_embedding.md
+  - Prompt Engineering: 04_prompt_engineering.md
+  - AI Applications: 05_ai_applications.md
+  - AI Agents using LangChain: 06_ai_agent_langchain.md
+  - LLM Solutions: 07_llm_solutions.md
 
 theme:
   name: material
