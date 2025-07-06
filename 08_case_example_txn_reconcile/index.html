@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../01_natural_language_processing/">
+        <link rel="prev" href="../07_llm_solutions/">
       
-      
-        <link rel="next" href="../03_rag_embedding/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Large Language Models - Prompt Engineering Guide</title>
+        <title>Case Example Transaction Reconciliation - Prompt Engineering Guide</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#large-language-models" class="md-skip">
+        <a href="#case-example-transaction-reconciliation" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Large Language Models
+              Case Example Transaction Reconciliation
             
           </span>
         </div>
@@ -235,32 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Large Language Models
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02_large_language_models/" class="md-nav__link">
         
   
   
@@ -271,194 +247,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#outline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Outline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-model-families" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Model Families
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Model Families">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proprietary-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proprietary Models
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#open-source-alternatives" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open Source Alternatives
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-transformer-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Transformer Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Transformer Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#autoregressive-training" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autoregressive Training
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaling-laws" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling Laws
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-tokenization-and-vocabulary" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Tokenization and Vocabulary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-training-algorithms" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Training Algorithms
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-using-hosted-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Using Hosted APIs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Using Hosted APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tips
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-evaluation-and-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Evaluation and Fine-tuning
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Evaluation and Fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameter-efficient-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter-Efficient Methods
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-ethical-and-practical-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Ethical and Practical Concerns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-hands-on-code-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Hands-on Code Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -577,10 +365,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../08_case_example_txn_reconcile/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Case Example Transaction Reconciliation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -591,6 +401,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#account-ledger-reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account ledger reconciliation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation-and-aims-for-ai-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation and aims for AI automation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconciliation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconciliation workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reconciliation workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#00-application-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      00 Application load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#01-statement-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      01 Statement upload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-statement-db-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      02 Statement DB load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-transaction-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      03 Transaction matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-repair-edits-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      04 Repair edits list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-rpa-repair" class="md-nav__link">
+    <span class="md-ellipsis">
+      05 RPA repair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-llm-agent-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      06 LLM Agent review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-manual-repair" class="md-nav__link">
+    <span class="md-ellipsis">
+      07 Manual repair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-agent-session-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      08 Agent session review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-training-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      09 Training feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-session-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Session close
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tech stack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other use cases
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -622,37 +602,127 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#outline" class="md-nav__link">
+  <a href="#account-ledger-reconciliation" class="md-nav__link">
     <span class="md-ellipsis">
-      Outline
+      Account ledger reconciliation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-model-families" class="md-nav__link">
+  <a href="#motivation-and-aims-for-ai-automation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Model Families
+      Motivation and aims for AI automation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Model Families">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconciliation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconciliation workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reconciliation workflow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proprietary-models" class="md-nav__link">
+  <a href="#00-application-load" class="md-nav__link">
     <span class="md-ellipsis">
-      Proprietary Models
+      00 Application load
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#open-source-alternatives" class="md-nav__link">
+  <a href="#01-statement-upload" class="md-nav__link">
     <span class="md-ellipsis">
-      Open Source Alternatives
+      01 Statement upload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-statement-db-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      02 Statement DB load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-transaction-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      03 Transaction matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-repair-edits-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      04 Repair edits list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-rpa-repair" class="md-nav__link">
+    <span class="md-ellipsis">
+      05 RPA repair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-llm-agent-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      06 LLM Agent review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-manual-repair" class="md-nav__link">
+    <span class="md-ellipsis">
+      07 Manual repair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-agent-session-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      08 Agent session review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-training-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      09 Training feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-session-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Session close
     </span>
   </a>
   
@@ -664,126 +734,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-transformer-architecture" class="md-nav__link">
+  <a href="#tech-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Transformer Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Transformer Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#autoregressive-training" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autoregressive Training
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaling-laws" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling Laws
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-tokenization-and-vocabulary" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Tokenization and Vocabulary
+      Tech stack
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-training-algorithms" class="md-nav__link">
+  <a href="#other-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Training Algorithms
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-using-hosted-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Using Hosted APIs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Using Hosted APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tips
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-evaluation-and-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Evaluation and Fine-tuning
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Evaluation and Fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameter-efficient-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter-Efficient Methods
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-ethical-and-practical-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Ethical and Practical Concerns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-hands-on-code-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Hands-on Code Example
+      Other use cases
     </span>
   </a>
   
@@ -805,83 +767,78 @@
 
 
 
-<h1 id="large-language-models">Large Language Models</h1>
-<p>Modern large language models (LLMs) such as GPT-4, Claude and open-source alternatives are built upon the transformer architecture. This week provides a deep dive into how these models are trained and how we can use them effectively.</p>
-<h2 id="outline">Outline</h2>
+<h1 id="case-example-transaction-reconciliation">Case Example: Transaction reconciliation</h1>
+<h2 id="account-ledger-reconciliation">Account ledger reconciliation</h2>
+<p>The aim of the reconciliation process is to reconcile two account ledgers at a transaction level:</p>
 <ul>
-<li>model families and providers</li>
-<li>transformer architecture basics</li>
-<li>tokenization and vocabulary</li>
-<li>training algorithms</li>
-<li>using hosted APIs</li>
-<li>evaluation and fine-tuning</li>
-<li>ethical and practical concerns</li>
-<li>hands-on code example</li>
+<li><strong>source of truth</strong>: actual bank statements, which is always lagging due to the limitation of manual MFA for statement downloading. The actual bank statements lack tagging to user specific categories, budget accounts and taxonomy.</li>
+<li><strong>digital twin</strong>: a user specific ledger, updated in real-time, with transactions tagged with user data model taxonomy.</li>
 </ul>
-<h2 id="1-model-families">1. Model Families</h2>
-<p>LLM providers fall into two broad categories: proprietary offerings like OpenAI’s GPT series or Anthropic’s Claude, and open models such as Llama or Mistral. Each family offers different licensing terms and API interfaces, but the underlying neural architecture shares common principles.</p>
-<h3 id="proprietary-models">Proprietary Models</h3>
+<h2 id="motivation-and-aims-for-ai-automation">Motivation and aims for AI automation</h2>
+<p>The motivation for automating with AI:</p>
 <ul>
-<li><strong>GPT-3/4</strong>: Developed by OpenAI, these models are known for their extensive training data and high-quality generation.</li>
-<li><strong>Claude</strong>: Anthropic’s assistant focuses on safety and steerable responses.</li>
+<li>Current process is <ul>
+<li>labor intensive, time-consuming</li>
+<li>Subject to human-error, fatigue</li>
 </ul>
-<h3 id="open-source-alternatives">Open Source Alternatives</h3>
-<ul>
-<li><strong>Llama</strong> from Meta and <strong>Mistral</strong> from independent labs show that smaller, efficient models can achieve competitive performance when fine-tuned on domain-specific data. Running open models locally gives greater control over data privacy and cost.</li>
+</li>
+<li>Largely deterministic and structured, making it a good candidate for AI-assisted automation</li>
 </ul>
-<h2 id="2-transformer-architecture">2. Transformer Architecture</h2>
-<p>The transformer revolutionized NLP by introducing self-attention mechanisms. Each layer computes queries, keys and values to weigh the importance of surrounding tokens. Positional encodings supply order information, while residual connections and layer normalization aid optimization.</p>
-<h3 id="autoregressive-training">Autoregressive Training</h3>
-<p>LLMs are typically trained to predict the next token in a sequence. This objective encourages the model to learn grammar, semantics and even factual knowledge from the training corpus.</p>
-<h3 id="scaling-laws">Scaling Laws</h3>
-<p>Research shows that model performance scales predictably with data, parameter count and compute budget. Understanding these relationships helps when deciding between a smaller local model and a large hosted service.</p>
-<h2 id="3-tokenization-and-vocabulary">3. Tokenization and Vocabulary</h2>
-<p>Tokenizers split text into manageable pieces. Byte-Pair Encoding (BPE) and WordPiece are common algorithms that build a vocabulary of subword units. Each token is mapped to an integer ID so it can be processed by the model. The vocabulary typically includes special symbols like <code>&lt;pad&gt;</code> for padding sequences and <code>&lt;eos&gt;</code> for marking the end of a sentence. Proper tokenization yields consistent sequence lengths and reduces out-of-vocabulary issues.</p>
-<h2 id="4-training-algorithms">4. Training Algorithms</h2>
-<p>Training begins with massive text corpora that are shuffled and broken into fixed-length sequences. The transformer processes each batch while the optimizer updates weights via gradient descent. Strategies such as gradient accumulation, mixed-precision training and data parallelism enable scaling to billions of parameters. Many teams further align the model with Reinforcement Learning from Human Feedback (RLHF), which uses human preference scores and Proximal Policy Optimization to refine responses.</p>
-<h2 id="5-using-hosted-apis">5. Using Hosted APIs</h2>
-<p>Most developers access LLMs through web APIs. When sending prompts, it’s important to manage context length, system instructions and rate limits. Providers like OpenAI return responses in JSON format with metadata. Error handling ensures robust applications.</p>
-<h3 id="example">Example</h3>
-<pre><code class="language-python">import openai
-openai.api_key = &quot;YOUR_KEY&quot;
-response = openai.ChatCompletion.create(
-    model=&quot;gpt-4&quot;,
-    messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Explain transformers&quot;}]
-)
-print(response.choices[0].message.content)
+<h2 id="reconciliation-workflow">Reconciliation workflow</h2>
+<h3 id="00-application-load">00 Application load</h3>
+<p>The user logs in to the application and begins a new session, the state is updated and the application detects the current state and status of reconciliations by month and account. The application guides the user to next steps and issues to resolve if any</p>
+<h3 id="01-statement-upload">01 Statement upload</h3>
+<p>User manually downloads statements as either PDF or Excel compatible (.csv, .xlsx) file format from the bank authenticated using MFA and uploads them using a file uploader UI feature that drops the files to a designated cloud storage location such as an AWS S3 bucket </p>
+<h3 id="02-statement-db-load">02 Statement DB load</h3>
+<p>Robotic Process Automation (RPA) ingests, parses the statements, performs cleanup and formatting and uploads the transaction data to a structured SQL database. </p>
+<pre><code>_AI enhancement_ Although a fully RPA process without LLM may suffice for well structured statements, this process could optionally be enhanced with pre and post processing steps added with an LLM Agent to perform pre-upload checks and to review and resolve any processing errors in the first pass statement ingestion.
+
+_Database_ The database can take many types of forms. On AWS, for example, could include RDS, Aurora or even an SQLite DB stored in S3 bucket
 </code></pre>
-<h3 id="tips">Tips</h3>
-<ul>
-<li>Cache frequent prompts to reduce latency and cost.</li>
-<li>Monitor token usage to avoid unexpected bills.</li>
-<li>Evaluate model outputs for bias or inappropriate content.</li>
-</ul>
-<h2 id="6-evaluation-and-fine-tuning">6. Evaluation and Fine-tuning</h2>
-<p>While base models provide impressive capabilities, performance often improves with fine-tuning on task-specific data. Evaluation metrics such as perplexity, BLEU or human preference scores help determine whether fine-tuning is necessary.</p>
-<h3 id="parameter-efficient-methods">Parameter-Efficient Methods</h3>
-<p>Techniques like LoRA (Low-Rank Adaptation) and prompt tuning modify only a small subset of model parameters or the input embeddings, enabling efficient adaptation even on modest hardware.</p>
-<h2 id="7-ethical-and-practical-concerns">7. Ethical and Practical Concerns</h2>
-<p>Large models inherit biases present in their training data. It is critical to monitor for unfair or harmful outputs. Data privacy must be considered when sending user content to hosted services. Finally, the energy consumption required to train these models raises environmental concerns. Organizations should weigh these factors when deciding on adoption.</p>
-<h2 id="8-hands-on-code-example">8. Hands-on Code Example</h2>
-<p>The snippet below shows how a small transformer model can be fine-tuned using the <code>transformers</code> library from Hugging Face.</p>
-<pre><code class="language-python">from datasets import load_dataset
-from transformers import (AutoTokenizer, AutoModelForCausalLM,
-                          Trainer, TrainingArguments)
+<h3 id="03-transaction-matching">03 Transaction matching</h3>
+<p>The transaction matching is the main reconciliation workflow and can include multiple passes and methods, and update with learning as the program is exposed and trained from user input from past reconcilation cases.</p>
+<pre><code>_Input validation pre-processing_: RPA process performs basic pre-processing input validation for easily detectable data integrity issues such as NULL values in non-NULL fields, duplicate transactions or empty ledgers.
 
-tokenizer = AutoTokenizer.from_pretrained('gpt2')
-model = AutoModelForCausalLM.from_pretrained('gpt2')
+_LLM Agent sanitation pre-processing_: LLM Agent has a peek at the data to check for potential problematic cases, perform custom clean-up, formatting, tagging and pre-formatting transactions or run pre-defined clean-up operations not yet built into the RPA pre-processing.
 
-def tokenize(batch):
-    return tokenizer(batch['text'], truncation=True, padding='max_length')
+_RPA Special cases pre-processing_: Custom pre-processing runs first by RPA process for pre-defined known special cases involving recurring transaction pairs and difficult to handle cases of many-to-many transaction pairs that have been either learned or manually defined by the user.
 
-data = load_dataset('wikitext', 'wikitext-2-raw-v1')
-tokenized = data['train'].map(tokenize, batched=True)
+_transaction pre-processing_: Individual transactions are pre-processed with standard NLP processing to format into standard features [date, account, amount, status, currency, payee, description] remove stopwords, POS tagging, lemmatization, and custom tagging from user-specific model (learned + user-defined)
 
-args = TrainingArguments('out', per_device_train_batch_size=2, num_train_epochs=1)
-trainer = Trainer(model=model, args=args, train_dataset=tokenized)
-trainer.train()
+_Hybrid classification model_: transaction pairs are classified from a hybrid similarity match (no training required) + trained model as either matched or not [0, 1]. The two models (similarity, trained) generate independent scores and the final score is taken as a weighted combination of the two component scores. Over time, the weight of the trained model can be dynamically incremented as accuracy improvement from exposure to more use cases.
+
+_Similarity model_: The similarity model can utilize different methods of similarity matching, each with different trade-offs of computational cost and accuracy. Simple token matching can be performed at high speed and low computational costs, whereas sentence embedding, BERT models can add accuracy boost with a noticeable trade-off in computational costs.
+
+_Trained classification model_: There are many types of standard classification models with Decision tree and Random Forest a good first choice and Neural Networks and Multi-Layered Neural Networks as advanced options.
 </code></pre>
-<p>By the end of week two you will be able to describe the architecture of modern LLMs, interact with them via APIs and understand the trade-offs between proprietary and open-source solutions.</p>
+<h3 id="04-repair-edits-list">04 Repair edits list</h3>
+<p>A list of repair edits is generated that will close the reconciliation gap between the ending balance between the reference source-of-truth and the digital twin ledgers.  Each transaction edit is either a REMOVE, ADD or UPDATE.  One fail-safe method for ensuring the process will always generate a solution is to begin with a naive set of edits: REMOVE ALL digital twin txns, ADD ALL source-of-truth, and then remove known matched transactions from the prior transaction matching step pair-wise that sum to zero, ensuring that each step of removed matched transactions preserves the condition of matched ending balance between source-of-truth and digital twin.</p>
+<h3 id="05-rpa-repair">05 RPA repair</h3>
+<p>An RPA process can automatically process repair edits to the digital twin some limited cases of qualified RPA-allowed repairs. Examples of allowed cases may include only amount update by &lt; +/- some threshold amount, or for foreign currency transactions or variable bills which are expected to vary from a range of expected amount in some range.</p>
+<h3 id="06-llm-agent-review">06 LLM Agent review</h3>
+<p>An LLM Agent can review the residual edits and follow a set of guidelines to apply repairs not caught by the RPA process, and for residual repairs to propose edits to the user which do not meet the guidelines for Agent repair. These guidelines can be seeded by the user and updated with learning and feedback by the AI Agent.</p>
+<h3 id="07-manual-repair">07 Manual repair</h3>
+<p>For any residual edits that do not qualify for either RPA or Agent repair, the user is prompted to manually repair either by manually matching transaction with instruction to update the digital twin to match the source-of-truth amount, or by manually updating the digital twin transaction. For example, in case where the transactions were not matched due to a miss-spelling or incorrect transaction category tagging, the user may decide to update the tag and regeneration the edits list in order to prevent corruption of the training model by feeding it bad training feedback cases.  </p>
+<h3 id="08-agent-session-review">08 Agent session review</h3>
+<p>An LLM Agent is prompted with the session details, and plans workflow for model, guideline updates.</p>
+<h3 id="09-training-feedback">09 Training feedback</h3>
+<p>The complete set of matched transactions and edit repairs is stored to train each of the models involved, the classifier, the RPA repair and the LLM Agent guide, with specific workflows triggered by the output of the Agent session review.</p>
+<h3 id="10-session-close">10 Session close</h3>
+<p>The downstream reports are updated from the updated digital twin and the session status is updated as closed. Any cleanup and logging are recorded to log and record session activity.</p>
+<h2 id="tech-stack">Tech stack</h2>
+<ul>
+<li><strong>Embedding model</strong>: all-MiniLM or similar for vector similarity</li>
+<li><strong>Vector store</strong>: FAISS or Qdrant</li>
+<li><strong>LLM agent orchestrator</strong>: LangChain or CrewAI</li>
+<li><strong>Document loader</strong>: PyPDF, CSV parser, or structured ingest from databases</li>
+<li><strong>Output</strong>: Markdown or spreadsheet with reconciliation results</li>
+</ul>
+<h2 id="other-use-cases">Other use cases</h2>
+<ol>
+<li>Case complaint classification</li>
+<li>Job search profile matching</li>
+<li>Personal finances coach</li>
+</ol>
 
 
 
