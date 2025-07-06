@@ -9,6 +9,7 @@ nav:
   - AI Applications: 05_ai_applications.md
   - AI Agents using LangChain: 06_ai_agent_langchain.md
   - LLM Solutions: 07_llm_solutions.md
+  - Case Example Transaction Reconciliation: 08_case_example_txn_reconcile.md
 
 theme:
   name: material

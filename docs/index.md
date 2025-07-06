@@ -39,7 +39,8 @@ The course focuses on:
   - building chatbots and conversational agents
   - summarization and question answering
   - domain-specific automation examples
-
+- **Case Example: Transaciton Reconciliation**
+A case examples of RPA and LLM AI Agents applied to real world use case of transaction reconciliation
 
 ## Course Schedule
 Week 1: Natural Language Processing
