@@ -442,9 +442,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-implementation-exercise" class="md-nav__link">
+  <a href="#8-implementation-exercise-qa-system" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Implementation Exercise
+      8. Implementation Exercise: Q&amp;A system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-explore-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Explore more
     </span>
   </a>
   
@@ -727,9 +736,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-implementation-exercise" class="md-nav__link">
+  <a href="#8-implementation-exercise-qa-system" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Implementation Exercise
+      8. Implementation Exercise: Q&amp;A system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-explore-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Explore more
     </span>
   </a>
   
@@ -752,7 +770,7 @@
 
 
 <h1 id="rag-embedding-and-vector-databases">RAG, Embedding and Vector Databases</h1>
-<p>Retrieval Augmented Generation (RAG) combines the reasoning abilities of language models with the accuracy of external knowledge bases. In week three we learn to build systems that fetch relevant context and feed it to a generator model.</p>
+<p>Retrieval Augmented Generation (RAG) combines the reasoning abilities of language models with the accuracy of external knowledge bases. The contents showcase how to build systems that fetch relevant context and feed it to a generator model.</p>
 <h2 id="outline">Outline</h2>
 <ul>
 <li>the RAG workflow</li>
@@ -762,7 +780,7 @@
 <li>building a RAG system</li>
 <li>evaluation metrics</li>
 <li>challenges and best practices</li>
-<li>implementation exercise</li>
+<li>implementation exercise: Q&amp;A system</li>
 </ul>
 <h2 id="1-the-rag-workflow">1. The RAG Workflow</h2>
 <ol>
@@ -780,9 +798,11 @@
 <li><strong>Supervised</strong>: Train on question–answer pairs or labelled data for more accurate retrieval.</li>
 </ul>
 <h2 id="3-vector-databases">3. Vector Databases</h2>
-<p>Specialized databases store millions of embeddings and provide efficient similarity search. Popular options include:
-- <strong>FAISS</strong>: A library for indexing and searching high-dimensional vectors. It offers product quantization and GPU acceleration.
-- <strong>Qdrant</strong> and <strong>Weaviate</strong>: Standalone services that store vectors with associated metadata. They support filtering, sharding and persistence.</p>
+<p>Specialized databases store millions of embeddings and provide efficient similarity search. Popular options include:</p>
+<ul>
+<li><strong>FAISS</strong>: A library for indexing and searching high-dimensional vectors. It offers product quantization and GPU acceleration.</li>
+<li><strong>Qdrant</strong> and <strong>Weaviate</strong>: Standalone services that store vectors with associated metadata. They support filtering, sharding and persistence.</li>
+</ul>
 <h3 id="indexing">Indexing</h3>
 <p>Vectors are often compressed or quantized for speed. Inverted file (IVF) indexes and HNSW graphs allow approximate nearest-neighbor search with controllable accuracy.</p>
 <h2 id="4-similarity-search-algorithms">4. Similarity Search Algorithms</h2>
@@ -826,10 +846,10 @@ such as ROUGE for summarization tasks.</p>
 <li><strong>Metadata</strong>: Storing source links allows the generation step to cite references.</li>
 <li><strong>Freshness</strong>: Periodically re-embed new documents so the knowledge base stays current.</li>
 </ul>
-<h2 id="8-implementation-exercise">8. Implementation Exercise</h2>
+<h2 id="8-implementation-exercise-qa-system">8. Implementation Exercise: Q&amp;A system</h2>
 <p>Create a simple question-answering system that reads a set of articles, embeds them into a FAISS index and uses an LLM to respond to user questions with retrieved passages. Evaluate how retrieval quality changes when using different embedding models or index parameters.</p>
-<p>By completing week three you will know how to integrate vector search with language models to build applications that provide grounded, accurate answers.</p>
-<p>Further reading includes papers on Dense Passage Retrieval and RAG-based open-domain question answering. Experiment with different embedding models and index parameters to understand the trade-offs between accuracy and latency.</p>
+<h2 id="9-explore-more">9. Explore more</h2>
+<p>Further reading includes papers on "Dense Passage Retrieval" and RAG-based open-domain question answering. To get more hands-on experience, experiment with different embedding models and index parameters to understand the trade-offs between accuracy and latency.</p>
 
 
 

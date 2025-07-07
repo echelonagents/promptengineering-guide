@@ -500,13 +500,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-practical-exercise" class="md-nav__link">
+  <a href="#11-practical-exercise-semantic-search-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      11. Practical Exercise
+      11. Practical Exercise: Semantic search engine
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="11. Practical Exercise">
+    <nav class="md-nav" aria-label="11. Practical Exercise: Semantic search engine">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -946,13 +946,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-practical-exercise" class="md-nav__link">
+  <a href="#11-practical-exercise-semantic-search-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      11. Practical Exercise
+      11. Practical Exercise: Semantic search engine
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="11. Practical Exercise">
+    <nav class="md-nav" aria-label="11. Practical Exercise: Semantic search engine">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -986,9 +986,8 @@
 
 
 <h1 id="natural-language-processing">Natural Language Processing</h1>
-<p>Natural Language Processing (NLP) is the discipline focused on understanding and generating human language with computers. In our first week we build the foundational toolkit for working with raw text. The goal is to transform unstructured sentences into representations that can be fed into language models or traditional machine learning pipelines.</p>
+<p>Natural Language Processing (NLP) is the discipline focused on understanding and generating human language with computers. The contents begins by building the foundational toolkit for working with raw text. The goal is to transform unstructured sentences into representations that can be fed into language models or traditional machine learning pipelines.</p>
 <h2 id="outline">Outline</h2>
-<p>The key topics for this module are:</p>
 <ul>
 <li>fundamental theory and language structure</li>
 <li>developing and training NLP models</li>
@@ -1000,7 +999,7 @@
 <li>clustering and semantic retrieval</li>
 <li>evaluation metrics for NLP pipelines</li>
 <li>machine learning with NLP features</li>
-<li>a hands-on practical exercise</li>
+<li>a hands-on practical exercise: semantic search engine</li>
 </ul>
 <h2 id="1-fundamental-theory-and-concepts-of-nlp">1. Fundamental Theory and Concepts of NLP</h2>
 <p>NLP builds upon linguistics, the scientific study of language. At the <strong>word</strong>
@@ -1089,12 +1088,14 @@ contextual embeddings with conditional random fields or recurrent networks.
 Generative models perform machine translation or summarization. All of these
 approaches rely on the same principle—encoding language into numerical features
 and optimizing a learning objective.</p>
-<h2 id="11-practical-exercise">11. Practical Exercise</h2>
-<p>The assignment for this module is to implement a small semantic search engine. Using Python libraries such as spaCy and scikit-learn, you will:
-1. Preprocess a text dataset by tokenizing, lemmatizing and removing stop words.
-2. Generate TF‑IDF features and train a basic classifier.
-3. Create sentence embeddings using a transformer model like <code>all-MiniLM</code> from the <code>sentence-transformers</code> package.
-4. Perform a similarity query and evaluate the retrieval quality.</p>
+<h2 id="11-practical-exercise-semantic-search-engine">11. Practical Exercise: Semantic search engine</h2>
+<p>This example is a small semantic search engine using Python libraries such as spaCy and scikit-learn:</p>
+<ol>
+<li>Preprocess a text dataset by tokenizing, lemmatizing and removing stop words.</li>
+<li>Generate TF‑IDF features and train a basic classifier.</li>
+<li>Create sentence embeddings using a transformer model like <code>all-MiniLM</code> from the <code>sentence-transformers</code> package.</li>
+<li>Perform a similarity query and evaluate the retrieval quality.</li>
+</ol>
 <h3 id="sample-setup-code">Sample Setup Code</h3>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sentence_transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">SentenceTransformer</span><span class="p">,</span> <span class="n">util</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="p">)</span>
@@ -1105,7 +1106,6 @@ and optimizing a learning objective.</p>
 <span class="n">results</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">semantic_search</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">corpus_embeddings</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 </code></pre></div>
-<p>By the end of week one, you should be comfortable preparing text for advanced models, generating embeddings and measuring similarity. These skills are essential for all subsequent weeks of the course.</p>
 
 
 
