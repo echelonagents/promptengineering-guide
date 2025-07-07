@@ -1,10 +1,7 @@
 # Natural Language Processing
-
-Natural Language Processing (NLP) is the discipline focused on understanding and generating human language with computers. In our first week we build the foundational toolkit for working with raw text. The goal is to transform unstructured sentences into representations that can be fed into language models or traditional machine learning pipelines.
+Natural Language Processing (NLP) is the discipline focused on understanding and generating human language with computers. The contents begins by building the foundational toolkit for working with raw text. The goal is to transform unstructured sentences into representations that can be fed into language models or traditional machine learning pipelines.
 
 ## Outline
-
-The key topics for this module are:
 
 - fundamental theory and language structure
 - developing and training NLP models
@@ -16,7 +13,7 @@ The key topics for this module are:
 - clustering and semantic retrieval
 - evaluation metrics for NLP pipelines
 - machine learning with NLP features
-- a hands-on practical exercise
+- a hands-on practical exercise: semantic search engine
 
 ## 1. Fundamental Theory and Concepts of NLP
 
@@ -131,12 +128,15 @@ Generative models perform machine translation or summarization. All of these
 approaches rely on the same principle—encoding language into numerical features
 and optimizing a learning objective.
 
-## 11. Practical Exercise
-The assignment for this module is to implement a small semantic search engine. Using Python libraries such as spaCy and scikit-learn, you will:
+## 11. Practical Exercise: Semantic search engine
+This example is a small semantic search engine using Python libraries such as spaCy and scikit-learn:
+
 1. Preprocess a text dataset by tokenizing, lemmatizing and removing stop words.
 2. Generate TF‑IDF features and train a basic classifier.
 3. Create sentence embeddings using a transformer model like `all-MiniLM` from the `sentence-transformers` package.
 4. Perform a similarity query and evaluate the retrieval quality.
+
+
 
 ### Sample Setup Code
 ```python
@@ -149,5 +149,3 @@ query_embedding = model.encode(query, convert_to_tensor=True)
 results = util.semantic_search(query_embedding, corpus_embeddings, top_k=2)
 print(results)
 ```
-
-By the end of week one, you should be comfortable preparing text for advanced models, generating embeddings and measuring similarity. These skills are essential for all subsequent weeks of the course.

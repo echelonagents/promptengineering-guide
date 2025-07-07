@@ -1,6 +1,6 @@
 # AI Agent Development using LangChain
 
-In week six we explore LangChain, a Python framework for building agents that chain multiple language model calls and tools together.
+LangChain, a Python framework for building agents that chain multiple language model calls and tools together.
 
 ## Outline
 
@@ -9,7 +9,7 @@ In week six we explore LangChain, a Python framework for building agents that ch
 - agent memory and state
 - multi-step agents
 - evaluation techniques
-- example project
+- example project: Q&A agent using vector store
 - further exploration
 
 ## 1. Building Chains
@@ -37,7 +37,7 @@ Complex tasks often require retrieval, reasoning and action in sequence. For exa
 ### Debugging and Tracing
 LangChain includes verbose logging and tracing utilities. These help inspect the reasoning process of the agent and diagnose unexpected behavior.
 
-## 5. Example Project
+## 5. Example Project: Q&A Agent using vector store
 Build a question answering assistant that looks up information in a vector store before replying. The chain uses the following steps:
 1. Receive the user question.
 2. Retrieve relevant documents from a vector database.
@@ -66,8 +66,6 @@ set or human ratings.
 ## 7. Further Exploration
 - Experiment with different chain structures such as sequential chains or parallel tool calls.
 - Use the LangChain evaluation module to benchmark your agent’s performance.
-
-By the end of week six you will be prepared to design complex LLM agents that use external tools and memory to solve real problems.
 
 The LangChain documentation includes many advanced patterns such as ReAct-style
 reasoning and planner-executor designs. Experiment with these templates to build

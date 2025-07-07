@@ -6,6 +6,10 @@ This release includes case examples for developing AI Agents in real-world appli
 Session logs are in reverse-chronological order with newer entries at the top and older entries at the bottom.
 Logs are timestamped to Singapore timezone
 
+### Clean up [Data Engineer] 2025-07-07 21:52
+
+- drop course contents references
+
 ### Contents [Data Engineer] 2025-07-06 22:38
 
 - elaborate Case example with

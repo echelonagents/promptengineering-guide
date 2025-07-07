@@ -1,9 +1,7 @@
 # Large Language Models
-
-Modern large language models (LLMs) such as GPT-4, Claude and open-source alternatives are built upon the transformer architecture. This week provides a deep dive into how these models are trained and how we can use them effectively.
+Modern large language models (LLMs) such as GPT-4, Claude and open-source alternatives are built upon the transformer architecture. The contents in this section provide a deep dive into how these models are trained and how we can use them effectively.
 
 ## Outline
-
 - model families and providers
 - transformer architecture basics
 - tokenization and vocabulary
@@ -11,7 +9,7 @@ Modern large language models (LLMs) such as GPT-4, Claude and open-source altern
 - using hosted APIs
 - evaluation and fine-tuning
 - ethical and practical concerns
-- hands-on code example
+- hands-on code example: post-training a transformer model
 
 ## 1. Model Families
 LLM providers fall into two broad categories: proprietary offerings like OpenAI’s GPT series or Anthropic’s Claude, and open models such as Llama or Mistral. Each family offers different licensing terms and API interfaces, but the underlying neural architecture shares common principles.
@@ -66,8 +64,9 @@ Techniques like LoRA (Low-Rank Adaptation) and prompt tuning modify only a small
 ## 7. Ethical and Practical Concerns
 Large models inherit biases present in their training data. It is critical to monitor for unfair or harmful outputs. Data privacy must be considered when sending user content to hosted services. Finally, the energy consumption required to train these models raises environmental concerns. Organizations should weigh these factors when deciding on adoption.
 
-## 8. Hands-on Code Example
+## 8. Hands-on Code Example: post-training an transformer model
 The snippet below shows how a small transformer model can be fine-tuned using the `transformers` library from Hugging Face.
+
 ```python
 from datasets import load_dataset
 from transformers import (AutoTokenizer, AutoModelForCausalLM,
@@ -86,5 +85,3 @@ args = TrainingArguments('out', per_device_train_batch_size=2, num_train_epochs=
 trainer = Trainer(model=model, args=args, train_dataset=tokenized)
 trainer.train()
 ```
-
-By the end of week two you will be able to describe the architecture of modern LLMs, interact with them via APIs and understand the trade-offs between proprietary and open-source solutions.

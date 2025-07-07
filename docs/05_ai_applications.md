@@ -1,15 +1,13 @@
 # AI Applications
-
-Week five focuses on integrating language models into real-world applications. We explore common patterns and discuss how to evaluate systems in production.
+Integrate language models into real-world applications. We explore common patterns and discuss how to evaluate systems in production.
 
 ## Outline
-
 - application patterns
 - system architecture and data pipelines
 - evaluation and feedback
 - safety considerations
 - monitoring and logging
-- implementation exercise
+- implementation exercise: conversational AI chatbot
 
 ## 1. Application Patterns
 LLMs power a variety of services including chatbots, summarization tools and knowledge extraction pipelines. We survey each of these patterns and discuss the design considerations involved.
@@ -52,10 +50,11 @@ analysis. Metrics such as response time, token usage and user satisfaction score
 help diagnose regressions. Dashboards enable operators to spot spikes in latency
 or abnormal output.
 
-## 6. Implementation Exercise
+## 6. Implementation Exercise: Conversational AI chatbot
 Design a simple application that integrates a chat interface with an LLM API. Track metrics such as user retention and feedback ratings. Experiment with prompt variants to improve helpfulness while maintaining safe responses.
 
 ### Example Code
+
 ```python
 import openai
 
@@ -68,8 +67,6 @@ def chat(question):
     chat_history.append({"role": "assistant", "content": answer})
     return answer
 ```
-
-After week five you will know how to plan and build LLM applications with a focus on evaluation, safety and user-centered design.
 
 Thorough monitoring and iterative prompt design will ensure your applications remain reliable as models and requirements evolve.
 

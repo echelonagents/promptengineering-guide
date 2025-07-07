@@ -1,6 +1,6 @@
 # LLM Solutions
 
-The final week surveys complete solutions built with language models across different industries. We discuss deployment considerations and real-world success stories.
+A survey of solutions built with language models and real-world success stories across different industries.
 
 ## Outline
 
@@ -9,9 +9,9 @@ The final week surveys complete solutions built with language models across diff
 - domain automation
 - deployment considerations
 - evaluation and analytics
-- capstone project
+- project: end-to-end application
 
-Throughout this week we connect the theory from earlier modules to real-world
+This section connect the theory from earlier contents to real-world
 deployments. Each domain presents unique challenges around data privacy, latency
 and user experience, but common architectural patterns emerge.
 
@@ -39,10 +39,7 @@ Production systems must monitor both technical metrics and user satisfaction. Ke
 
 Regular evaluation days allow teams to review logs and fine-tune prompts or retrievers. Over time, this data builds a feedback loop that guides future model updates and training.
 
-## 6. Capstone Project
-Students are encouraged to design a small end-to-end application incorporating retrieval, prompt engineering and an LLM agent. Presentations at the end of the course showcase the creativity and technical depth achieved during the seven weeks.
-
-## 7. Case Studies
+## 6. Hypothetical Use cases
 - **E-commerce Chatbot**: uses product embeddings to recommend items and answer
   queries about inventory.
 - **Legal Document Summarizer**: assists lawyers by extracting key clauses and
@@ -52,6 +49,8 @@ Students are encouraged to design a small end-to-end application incorporating r
 - **Educational Tutor**: generates practice problems and adaptive feedback for
   students preparing for exams.
 
-By studying these complete solutions you will understand how the concepts from earlier weeks combine to create robust, real-world products powered by language models.
+## 7. Project: End-to-end application
+Design a small end-to-end application incorporating retrieval, prompt engineering and an LLM agent. 
+
 
 Continued experimentation will reveal new possibilities as LLM technology evolves, enabling innovative services across every sector.
